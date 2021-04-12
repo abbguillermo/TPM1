@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Mod2</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <h2>Complete los campos con los datos requeridos</h2>
+    <hr>
+
+    <!-- ejercicio 1 html--> 
+    <h3>Suma de dos números</h3>
+    <form>
+        <label for "num1_suma">1er número</label>
+        <input type="number" id="num1_suma"> 
+        <h6></h6>
+        <label for="num2_suma">2do número</label>
+        <input type="number" id="num2_suma">
+        <h6></h6>
+        <label for "input_resultado_suma">Resultado suma</label>
+        <input type="number" id="input_resultado_suma">
+        <h6></h6>
+        <button onclick="suma()">Sumar</button>
+        <h6></h6>
+    </form>
+    
+    
+        <hr>
+        <footer>
+            <p style="text-align: center;">Programación 1 - UNRaf - 2021</p>
+            <p style="text-align: center;"><a href="/index.html">Página principal</a></p>
+        </footer>
+        
+        <!-- ejercicio 1 js -->
+        <script>
+                function suma() {
+                    variable_num1_suma= parseInt(document.getElementById("num1_suma").value);
+                    variable_num2_suma= parseInt(document.getElementById("num2_suma").value);
+                    resultado_suma= variable_num1_suma + variable_num2_suma;
+                    document.getElementById("input_resultado_suma").value = resultado_suma;
+                }
+        </script>
+</body>
+</html>
