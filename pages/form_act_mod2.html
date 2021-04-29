@@ -11,13 +11,13 @@
     <h2>Complete los campos con los datos requeridos</h2>
     <hr>
 
-    <!-- ejercicio 1 html--> 
+<!-- ejercicio 1 html--> 
     <h3>Suma de dos números</h3>
-    <form>
+    
         <label for "num1_suma">1er número</label>
         <input type="number" id="num1_suma"> 
         <h6></h6>
-        <label for="num2_suma">2do número</label>
+        <label for "num2_suma">2do número</label>
         <input type="number" id="num2_suma">
         <h6></h6>
         <label for "input_resultado_suma">Resultado suma</label>
@@ -25,22 +25,246 @@
         <h6></h6>
         <button onclick="suma()">Sumar</button>
         <h6></h6>
-    </form>
-    
-    
+<hr>
+<!-- ejercicio 1 clase html CONDICIONALES-->
+    <h3>Ingrese 3 valores</h3>
+        <label for "primer_input">Primer número</label>
+        <input type="number" id="primer_input">
+        <label for "segundo_input">Segundo número</label>
+        <input type="number" id="segundo_input">
+        <label for "tercer_input">Tercer número</label>
+        <input type="number" id="tercer_input">
+        <label for "cuarto_input">El mayor es: </label>
+        <input type="number" id="cuarto_input">
+        <button onclick="mayor()"> indicar mayor</button>
+<hr>
+<!--ejercicio 2 clase js CICLO FOR-->
+    <h3>Ingrese una letra y la cantidad a repetirse</h3>        
+        <label for "letra">Letra</label>
+        <input type="text" id="letra">
+        <label for "cantidad">Número</label>
+        <input type="number" id="cantidad">
+        <label for "repeticion">Repetición</label>
+        <input type="text" id="repeticion">
+        <button onclick="repetir_letra()">Repetir</button>
+<hr>
+<!--ejercicio 2 html-->
+    <h3>Ingrese 4 valores. Se indicarán el mayor y el menor</h3>
+        <label for "num1_m_m">Primer número</label>
+        <input type="number" id="num1_m_m">
+        <label for "num2_m_m">Segundo número</label>
+        <input type="number" id="num2_m_m">
+        <h6></h6>
+        <label for "num3_m_m">Tercer número</label>
+        <input type="number" id="num3_m_m">
+        <label for "num4_m_m">Cuarto número</label>
+        <input type="number" id="num4_m_m">
+        <h6></h6>
+        <label for "mayor_m_m">Número mayor</label>
+        <input type="number" id="mayor_m_m">
+        <label for "menor_m_m">Número menor</label>
+        <input type="number" id="menor_m_m">
+        <button onclick="mayor_menor()">Indicar mayor y menor</button>
+<hr>
+<!--ejercicio 5 html-->
+    <h3>Contador de caracteres</h3>
+        <label for "palabra_cont">Palabra</label>
+        <input type="text" id="palabra_cont">
+        <label for "cant_cont">Cantidad de caracteres</label>
+        <input type="text" id="cant_cont">
+        <button onclick="contador_carac()">Contar caracteres</button>
+<hr>
+<!--ejercicio 6 html-->
+        <h3>Par - Impar</h3>
+        <label for "numero_par_impar">Número</label>
+        <input type="number" id="numero_par_impar">
+        <label for "par_impar">Par o Impar</label>
+        <input type="text" id="par_impar">
+        <button onclick="par_impar()">Par o Impar</button>
+<hr>
+<!--ejercicio 7 html-->
+        <h3>Múltiplos de 3</h3>
+        <label for "multi_3">Múltiplos de 3 entre 1 y 20</label>
+        <input type="text" id="multi_3">
+        <button onclick="mult_3()">Indicar</button>
+<hr>
+<!--ejercicio 7 html-->
+        <h3>Números primos</h3>
+        <label for "num_primo">Numeros primos hasta: </label>
+        <input type="text" id="num_primo">
+        <label for "nums_primo">Números primos: </label>
+        <input type="text" id="nums_primo">
+        <button onclick="primos()">Indicar</button>
+<hr>
+<!--ejercicio 8 html-->
+        <h3>Completar texto</h3>
+        <label for="nombre_ej8">Nombre</label>
+        <input type="text" id="nombre_ej8">
+        <label for="apellido_ej8">Apellido</label>
+        <input type="text" id="apellido_ej8">
+        <label for="edad_ej8">Edad</label>
+        <input type="number" id="edad_ej8">
+        <label for="ciudad_ej8">Ciudad</label>
+        <input type="text" id="ciudad_ej8">
+        <button onclick="completar_texto()">Completar texto</button>
+        <h6></h6>
+        <h4>Texto: </h4> 
+        <h5 id="texto_completo"></h5>
+
+        
+        
+        
         <hr>
         <footer>
             <p style="text-align: center;">Programación 1 - UNRaf - 2021</p>
             <p style="text-align: center;"><a href="/index.html">Página principal</a></p>
         </footer>
         
-        <!-- ejercicio 1 js -->
+
+        <!-- ejercicios js -->
         <script>
+        /* ejercicio 1 js */
                 function suma() {
                     variable_num1_suma= parseInt(document.getElementById("num1_suma").value);
                     variable_num2_suma= parseInt(document.getElementById("num2_suma").value);
                     resultado_suma= variable_num1_suma + variable_num2_suma;
                     document.getElementById("input_resultado_suma").value = resultado_suma;
+                }
+
+        /*ejercicio 1 clase js CONDICIONALES */
+                function mayor() {
+                    v1= parseFloat (document.getElementById("primer_input").value);
+                    v2= parseFloat (document.getElementById("segundo_input").value);
+                    v3= parseFloat (document.getElementById("tercer_input").value);
+                    
+                    if (v1  >= v2 && v1 >= v3) {
+                        numero_mayor = v1
+                    } else { 
+                        if (v2 >= v1 && v2 >= v3) {
+                            numero_mayor = v2
+                        } else {
+                            numero_mayor = v3
+                        }
+                    }
+                    document.getElementById("cuarto_input").value = numero_mayor    
+                    }
+
+        /*ejercicio 2 clase js CICLO FOR*/
+                function repetir_letra() {
+                    var_letra = document.getElementById("letra").value
+                    var_cantidad = parseFloat (document.getElementById("cantidad").value)
+                    cant_letra= ""
+                    
+                    for (i = 0; i < var_cantidad; i++) {
+                        cant_letra=cant_letra+var_letra
+                        console.log(cant_letra);
+                    }
+                    document.getElementById("repeticion").value = cant_letra
+                }
+
+        /*ejercicio 2 js*/
+                function mayor_menor() {
+                    v1_m_m= parseFloat (document.getElementById("num1_m_m").value)
+                    v2_m_m= parseFloat (document.getElementById("num2_m_m").value)
+                    v3_m_m= parseFloat (document.getElementById("num3_m_m").value)
+                    v4_m_m= parseFloat (document.getElementById("num4_m_m").value)
+                    
+                    if (v1_m_m >= v2_m_m && v1_m_m >= v3_m_m && v1_m_m >= v4_m_m) {
+                        mayor_m_m_ = v1_m_m
+                    } else { 
+                        if (v2_m_m >= v1_m_m && v2_m_m >= v3_m_m && v2_m_m >= v4_m_m) {
+                            mayor_m_m_ = v2_m_m
+                        } else {
+                            if (v3_m_m >= v1_m_m && v3_m_m >= v1_m_m && v3_m_m >= v4_m_m) {
+                                mayor_m_m_ = v3_m_m
+                            } else {
+                                mayor_m_m_ = v4_m_m
+                            }
+                        }
+                        
+                    }
+                    (document.getElementById("mayor_m_m").value) = mayor_m_m_
+                    
+                    if (v1_m_m <= v2_m_m && v1_m_m <= v3_m_m && v1_m_m <= v4_m_m) {
+                        menor_m_m_ = v1_m_m
+                    } else { 
+                        if (v2_m_m <= v1_m_m && v2_m_m <= v3_m_m && v2_m_m <= v4_m_m) {
+                            menor_m_m_ = v2_m_m
+                        } else {
+                            if (v3_m_m <= v1_m_m && v3_m_m <= v1_m_m && v3_m_m <= v4_m_m) {
+                                menor_m_m_ = v3_m_m
+                            } else {
+                                menor_m_m_ = v4_m_m
+                            }
+                        }
+                        
+                    }
+                    (document.getElementById("menor_m_m").value) = menor_m_m_
+                }
+
+        /*ejercicio 5 js*/
+                function contador_carac() {
+                    palabra_conta= document.getElementById("palabra_cont").value;
+                    cant_letras= palabra_conta.lenght;
+                    
+                    document.getElementById("cant_cont").value = parseFloat(cant_letras);
+                }
+
+        /*ejercicio 6 js*/
+                function par_impar() {
+                    num_par_impar= parseFloat (document.getElementById("numero_par_impar").value)
+                    
+                    if (num_par_impar % 2 == 0) {
+                        document.getElementById("par_impar").value = "PAR"
+                    } else {
+                        document.getElementById("par_impar").value = "IMPAR"
+                    }
+                }
+
+        /*ejercicio 7 js*/
+                function mult_3() {
+                    multiplos_de_3= ""
+                    
+                    for (i=1 ; i<=20 ; i++) {
+                    console.log(i)
+                    
+                        if (i % 3 == 0) {
+                        multiplos_de_3=multiplos_de_3+i+", "
+                        }
+                    }
+                    document.getElementById("multi_3").value = multiplos_de_3
+                }
+
+        /*ejercicio 8 js*/
+                function primos() {
+                    limite_primo= parseFloat(document.getElementById("num_primo").value);
+                    numeros_primos= "";
+                    cont_primos= 0;
+                    for (let i = 2; i <= parseFloat(limite_primo); i++) {
+                        
+                        for (let y = 2; y <= (i/2); y++) {
+                            
+                            if (i%y == 0) {
+                                cont_primos=cont_primos+1;
+                            }
+                        }
+                        if (parseFloat(cont_primos)==0) {
+                            numeros_primos= numeros_primos  + i + ", "
+                        }
+                        cont_primos = 0
+                    }
+                    document.getElementById("nums_primo").value= numeros_primos
+                }
+
+                function completar_texto() {
+                    nombre_ej8= document.getElementById("nombre_ej8").value;
+                    apellido_ej8= document.getElementById("apellido_ej8").value;
+                    edad_ej8= document.getElementById("edad_ej8").value;
+                    ciudad_ej8= document.getElementById("ciudad_ej8").value;
+                    
+                    texto_completo= "Mi nombre es " + nombre_ej8 + " " + apellido_ej8 + ", tengo "  + edad_ej8 + " años. Nací en la ciudad de " + ciudad_ej8 + "."
+                    
+                    document.getElementById("texto_completo").innerText = texto_completo
                 }
         </script>
 </body>
